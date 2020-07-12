@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="loteria" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top" translatesAutoresizingMaskIntoConstraints="NO" id="Jjk-Ta-hFj">
+                                <rect key="frame" x="0.0" y="44" width="375" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="3yJ-OW-b2t"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mega Sena" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLE-Y9-f0f">
+                                <rect key="frame" x="0.0" y="44" width="375" height="180"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Jr-AU-d8h">
+                                <rect key="frame" x="16" y="244" width="343" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Mega sena"/>
+                                    <segment title="Quina"/>
+                                </segments>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="selectedSegmentTintColor" red="0.0" green="0.31311921199999998" blue="0.64979355569999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="generateGame:" destination="BYZ-38-t0r" eventType="valueChanged" id="k27-TZ-uho"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHf-JO-ojs">
+                                <rect key="frame" x="39" y="732" width="297" height="46"/>
+                                <color key="backgroundColor" red="0.0" green="0.31311921199997145" blue="0.64979355569948183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Dkj-HN-VIh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Gerar Jogo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generateGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tlg-uE-E5d"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-lg-964">
+                                <rect key="frame" x="42.666666666666657" y="361" width="290" height="190"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eGr-zh-Y1j">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQU-OL-pcb">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG9-aa-REO">
+                                                <rect key="frame" x="100" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWC-ji-cot">
+                                                <rect key="frame" x="200" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UhW-4l-M9C">
+                                        <rect key="frame" x="0.0" y="100" width="290" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOC-PZ-GkQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZ3-RK-ie4">
+                                                <rect key="frame" x="100" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYn-Qu-Q2E">
+                                                <rect key="frame" x="200" y="0.0" width="90" height="90"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                                <state key="normal" title="60" backgroundImage="ball">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VG3-lg-964" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="15r-R2-ZB7"/>
+                            <constraint firstItem="Jjk-Ta-hFj" firstAttribute="trailing" secondItem="RLE-Y9-f0f" secondAttribute="trailing" id="5iE-yk-NiL"/>
+                            <constraint firstItem="7Jr-AU-d8h" firstAttribute="top" secondItem="Jjk-Ta-hFj" secondAttribute="bottom" constant="20" id="6M2-6k-YZL"/>
+                            <constraint firstItem="VG3-lg-964" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AXp-FM-uNd"/>
+                            <constraint firstItem="Jjk-Ta-hFj" firstAttribute="top" secondItem="RLE-Y9-f0f" secondAttribute="top" id="Azu-2h-Ktx"/>
+                            <constraint firstItem="Jjk-Ta-hFj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dx9-nq-sNm"/>
+                            <constraint firstItem="UHf-JO-ojs" firstAttribute="centerX" secondItem="VG3-lg-964" secondAttribute="centerX" id="Fs9-s8-ovK"/>
+                            <constraint firstItem="7Jr-AU-d8h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qza-I2-K2v"/>
+                            <constraint firstItem="Jjk-Ta-hFj" firstAttribute="centerX" secondItem="VG3-lg-964" secondAttribute="centerX" id="USB-wH-Xra"/>
+                            <constraint firstItem="UHf-JO-ojs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="Vwk-Ke-0vs"/>
+                            <constraint firstItem="7Jr-AU-d8h" firstAttribute="centerX" secondItem="Jjk-Ta-hFj" secondAttribute="centerX" id="WDE-Mj-3ak"/>
+                            <constraint firstItem="UHf-JO-ojs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XUa-HY-xYI"/>
+                            <constraint firstItem="Jjk-Ta-hFj" firstAttribute="leading" secondItem="RLE-Y9-f0f" secondAttribute="leading" id="dv9-Iw-oKS"/>
+                            <constraint firstItem="Jjk-Ta-hFj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e8x-DY-rqx"/>
+                            <constraint firstItem="Jjk-Ta-hFj" firstAttribute="bottom" secondItem="RLE-Y9-f0f" secondAttribute="bottom" id="tyS-xa-Px1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameTypes" destination="7Jr-AU-d8h" id="hZP-wC-mdp"/>
+                        <outlet property="lbType" destination="RLE-Y9-f0f" id="dAF-Jh-uUT"/>
+                        <outletCollection property="gameNumbers" destination="tQU-OL-pcb" collectionClass="NSMutableArray" id="DaX-De-5ck"/>
+                        <outletCollection property="gameNumbers" destination="RG9-aa-REO" collectionClass="NSMutableArray" id="4pa-f1-5Nc"/>
+                        <outletCollection property="gameNumbers" destination="zWC-ji-cot" collectionClass="NSMutableArray" id="BO2-K6-0Vy"/>
+                        <outletCollection property="gameNumbers" destination="EOC-PZ-GkQ" collectionClass="NSMutableArray" id="Tl0-Ig-7Xe"/>
+                        <outletCollection property="gameNumbers" destination="IZ3-RK-ie4" collectionClass="NSMutableArray" id="SyM-KI-Nwu"/>
+                        <outletCollection property="gameNumbers" destination="cYn-Qu-Q2E" collectionClass="NSMutableArray" id="URG-Ds-n24"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="126.35467980295567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball" width="90" height="90"/>
+        <image name="top" width="750" height="295"/>
+    </resources>
+</document>
